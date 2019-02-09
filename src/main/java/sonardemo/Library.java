@@ -7,4 +7,9 @@ public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
+
+    public String getMessage() {
+        return "Hello World";
+    }
+
 }
