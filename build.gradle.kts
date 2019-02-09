@@ -28,6 +28,8 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation("junit:junit:4.12")
+    testImplementation("org.assertj:assertj-core:3.11.1")
+
 }
 
 jacoco {
