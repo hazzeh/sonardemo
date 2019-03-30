@@ -6,5 +6,12 @@ pipeline {
         sh './gradlew build'
       }
     }
-  }
+    stage('Sonarqube') {
+      steps {
+         withSonarQubeEnv('Sonarcloud') {
+           sh './gradlew sonarqube'
+       }
+     } 
+    }
+      }
 }
