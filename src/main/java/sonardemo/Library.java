@@ -8,8 +8,16 @@ public class Library {
         return true;
     }
 
-    public String getMessage() {
-        return "Hello World";
+    public String getGreeting(String lang) {
+        switch (lang) {
+            case "en_US":
+                return "Hello World";
+            case "sv_SE":
+                return "Hej Världen";
+            default:
+                throw new IllegalArgumentException("Unsupported language");
+        }
+
     }
 
 }

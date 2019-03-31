@@ -15,8 +15,22 @@ public class LibraryTest {
     }
 
     @Test
-    public void messageShouldSayHello() {
+    public void messageShouldSayHelloWhenEnglish() {
         Library sut = new Library();
-        assertThat(sut.getMessage()).isEqualTo("Hello World");
+        assertThat(sut.getGreeting("en_US")).isEqualTo("Hello World");
+    }
+
+    @Test
+    public void messageShouldSayHejWhenSwedish() {
+        Library sut = new Library();
+        assertThat(sut.getGreeting("sv_SE")).isEqualTo("Hej Världen");
+    }
+
+    @Test
+    public void shouldThrowIfUnsupportedLanguage() {
+        Library sut = new Library();
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> sut.getGreeting("unsupported"))
+                .withMessage("Unsupported language");
     }
 }
