@@ -33,4 +33,5 @@ public class LibraryTest {
                 .isThrownBy(() -> sut.getGreeting("unsupported"))
                 .withMessage("Unsupported language");
     }
+
 }
