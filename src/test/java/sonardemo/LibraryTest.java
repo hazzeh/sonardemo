@@ -33,4 +33,12 @@ public class LibraryTest {
                 .isThrownBy(() -> sut.getGreeting("unsupported"))
                 .withMessage("Unsupported language");
     }
+
+    @Test
+    public void test1() {
+        Library2 sut = new Library2();
+        assertThat(sut.add(1,2)).isEqualTo(3);
+
+
+    }
 }
