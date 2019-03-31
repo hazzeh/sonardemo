@@ -17,6 +17,6 @@ public class LibraryTest {
     @Test
     public void messageShouldSayHello() {
         Library sut = new Library();
-        assertThat(sut.getMessage()).isEqualTo("Hello World");
+        assertThat(sut.getMessage()).isEqualTo("Hello World blue");
     }
 }

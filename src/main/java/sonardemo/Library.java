@@ -9,7 +9,10 @@ public class Library {
     }
 
     public String getMessage() {
-        return "Hello World";
+        String message = "blue";
+
+
+        return String.format("Hello World %s",message );
     }
 
 }
