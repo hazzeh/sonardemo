@@ -14,4 +14,4 @@ cache:
     - '.gradle'
 
 script:
-  - ./gradlew --info -Dsonar.projectKey=hazzeh_sonardemo sonarqube
+  - ./gradlew -Dsonar.projectKey=hazzeh_sonardemo sonarqube
