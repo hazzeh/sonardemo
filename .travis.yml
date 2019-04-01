@@ -1,0 +1,17 @@
+language: java
+install: true
+addons:
+  sonarcloud:
+    organization: "hazzeh-github"
+
+jdk:
+  - oraclejdk8
+
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
+    - '$HOME/.gradle'
+    - '.gradle'
+
+script:
+  - ./gradlew -Dsonar.projectKey=hazzeh_sonardemo sonarqube
