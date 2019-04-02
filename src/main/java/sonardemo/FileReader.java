@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FileReader {
 
@@ -13,7 +14,9 @@ public class FileReader {
         Path path = getPath();
         BufferedReader reader = Files.newBufferedReader(path);
         reader.close();
-        return Files.lines(path).collect(Collectors.joining(";"));
+        try (Stream<String> input = Files.lines(path)) {
+            return input.collect(Collectors.joining(";"));
+        }
     }
 
     private Path getPath() {
