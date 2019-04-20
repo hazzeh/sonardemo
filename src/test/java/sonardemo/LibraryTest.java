@@ -4,11 +4,19 @@
 package sonardemo;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.*;
+
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
+    @Test
+    public void testSomeLibraryMethod() {
         Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+        assertThat(classUnderTest.someLibraryMethod()).isTrue();
+    }
+
+    @Test
+    public void messageShouldSayHello() {
+        Library sut = new Library();
+        assertThat(sut.getMessage()).isEqualTo("Hello World");
     }
 }
