@@ -32,10 +32,12 @@ public class Library {
 
     }
 
-    void doSomething(String [] strings) {
-        for (int i = 0; i < strings.length; i--) {
-            String string = strings[i];
+    String doSomething(String [] strings) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < strings.length; i++) {
+            sb.append(strings[i]+"-");
         }
+        return sb.toString();
     }
 
 }
