@@ -3,8 +3,20 @@
  */
 package sonardemo;
 
+import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Library {
     public boolean someLibraryMethod() {
+        return true;
+    }
+
+    public boolean unusedMethod() {
+        Optional<String> opt = Optional.of("Dummy");
+        if (opt != null) {
+            Logger.getAnonymousLogger().log(Level.INFO, opt.get());
+        }
         return true;
     }
 
