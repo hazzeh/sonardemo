@@ -33,4 +33,10 @@ public class LibraryTest {
                 .isThrownBy(() -> sut.getGreeting("unsupported"))
                 .withMessage("Unsupported language");
     }
+
+    @Test
+    public void unusedMethodShouldReturnTrue() {
+        Library sut = new Library();
+        assertThat(sut.unusedMethod()).isTrue();
+    }
 }

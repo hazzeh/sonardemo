@@ -14,9 +14,7 @@ public class Library {
 
     public boolean unusedMethod() {
         Optional<String> opt = Optional.of("Dummy");
-        if (opt != null) {
-            Logger.getAnonymousLogger().log(Level.INFO, opt.get());
-        }
+        Logger.getAnonymousLogger().log(Level.INFO, opt.get());
         return true;
     }
 
